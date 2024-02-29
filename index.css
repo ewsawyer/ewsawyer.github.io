@@ -1,0 +1,90 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--off-black: #222526;
+	--off-white: #f5f5f5;
+}
+
+body {
+	color: var(--off-black);
+	background-color: var(--off-white);
+}
+
+header {
+	border-bottom: 2px solid var(--off-black);
+	padding: 15px 0 22px 0;
+	text-align: center;
+}
+
+main {
+	padding-top: 3rem;
+}
+
+a {
+	text-decoration: inherit;
+	color: inherit;
+}
+
+#my-name {
+	font-family: 'ADLaM Display', cursive;
+	font-size: 4rem;
+}
+
+.game-list {
+	display: flex;
+	justify-content: center;
+}
+
+.game-link {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 45vmin;
+	height: 30vmin;
+	margin: 10px;
+	border: 5px solid var(--off-black);
+	border-radius: 15px;
+	transition: box-shadow .1s, translate .1s;
+}
+
+.game-link:hover {
+	box-shadow: 5px 5px #333839;
+}
+
+.game-link:active {
+	translate: 5px 5px;
+	box-shadow: 0px 0px;
+}
+
+.game-link > h1 {
+	text-align: center;
+	font-size: 3rem;
+}
+
+#serious-business {
+	font-family: "Libre Baskerville";
+	background-image: url("img/sb-paper-bg.png");
+}
+
+#bbbb {
+	background-image: url("img/bbbb.svg");
+	background-size: cover;
+}
+
+#bbbb > h1 {
+	text-align: left;
+	padding-left: 3.5rem;
+}
+
+.centered-txt {
+	text-align: center;
+}
+
+.bigger {
+	font-size: 2.5em;
+}

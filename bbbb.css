@@ -1,0 +1,22 @@
+body {
+	font-family: 'Teko';
+	font-size: 1.8em;
+	background-image: url("img/wavy-pattern.png");
+	background-color: rgb(110, 210, 230);
+}
+
+#game-title {
+	font-size: 4.6em;
+	animation-name: floating;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+p {
+	font-size: 1.2em;
+}
+
+#home-btn > p {
+	translate: 0 -20px;
+}

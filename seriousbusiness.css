@@ -1,0 +1,13 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url("img/sb-paper-bg.png");
+	font-family: "Libre Baskerville";
+}
+
+img {
+	animation: none;
+}
+

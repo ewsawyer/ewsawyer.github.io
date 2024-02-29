@@ -1,0 +1,68 @@
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: inherit;
+	color: inherit;
+}
+
+main.article {
+	width: 70%;
+	margin: 0 auto;
+	max-width: 40em;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+	border-radius: 40px;
+
+	animation-name: floating;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+.article > img {
+	margin: auto;
+}
+
+h2 {
+	margin-top: 2em;
+	text-align: center;
+}
+
+#home-icon {
+	width: 60px;
+	height: 60px;
+	margin-right: 10px;
+	animation: none;
+}
+
+#home-btn > p {
+	translate: 0px 4px;
+}
+
+#home-btn {
+	display: flex;
+}
+
+#game-title {
+	font-size: 4rem;
+	text-align: center;
+}
+
+@keyframes floating {
+	0% {
+		transform: translate(0px, 0px);
+	}
+	50% {
+		transform: translate(0px, -15px);
+	}
+	100% {
+		transform: translate(0px, 0px);
+	}
+}
+
+
