@@ -1,8 +1,12 @@
+:root {
+	--main-color: rgb(8, 44, 55);
+}
+
 body {
 	font-family: 'Teko';
 	font-size: 1.8em;
-	background-image: url("img/wavy-pattern.png");
-	background-color: rgb(110, 210, 230);
+	background: url("img/wavy-pattern.png") rgba(99, 189, 214, 0.998);
+	color: var(--main-color);
 }
 
 #game-title {
@@ -11,10 +15,39 @@ body {
 	animation-duration: 3s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
+	margin: 20px;
+}
+
+img {
+	animation-name: floating;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	border-radius: 40px;
+	max-width: 400px;
+	border: 8px solid var(--main-color);
+}
+
+h2 {
+	font-size: 4rem;
+	margin-bottom: .25em;
+	text-align: left;
+}
+
+#logline {
+	font-size: 2.8rem;
+	text-align: center;
+	width: 60%;
+	margin: 0 auto;
 }
 
 p {
 	font-size: 1.2em;
+}
+
+#home-icon {
+	border-width: 3px;
+	padding: 5px;
 }
 
 #home-btn > p {

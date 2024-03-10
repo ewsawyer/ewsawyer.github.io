@@ -1,0 +1,42 @@
+:root {
+	--gradient-angle: 0deg;
+}
+
+@font-face {
+	font-family: JoystixMono;
+	src: url("fonts/joystix\ monospace.otf") format("opentype");
+}
+
+body {
+	background-color: rgb(56, 56, 56);
+	color: white;
+	font-size: 1.2em;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main.article {
+	max-width: 800px;
+}
+
+h1, h2 {
+	font-family: JoystixMono;
+	background: linear-gradient(90deg, rgba(237,226,63,1) 0%, rgba(237,226,63,1) 18%, rgba(232,132,224,1) 37%, rgba(85,210,88,1) 56%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	filter: drop-shadow(3px 3px #0f0f0f);  
+}
+
+h2 {
+	font-size: 3rem;
+	letter-spacing: 2px;
+	text-align: left;
+}
+
+iframe, main.article img {
+	border: 7px solid white;
+	box-shadow: 4px 6px #000000;
+	display: block;
+	margin: auto;
+}
+

@@ -16,12 +16,6 @@ main.article {
 img {
 	max-width: 100%;
 	display: block;
-	border-radius: 40px;
-
-	animation-name: floating;
-	animation-duration: 4s;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease-in-out;
 }
 
 .article > img {
