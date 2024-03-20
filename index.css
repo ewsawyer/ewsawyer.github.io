@@ -40,21 +40,19 @@ a {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	flex-direction: column;
 }
 
 #bio {
-	height: 40vh;
-	width: 50%;
 	margin: 20px auto 50px auto;
 }
 
 #bio > * {
-	margin: 0 30px;
+	margin: 10px 30px;
 }
 
 #bio > img {
 	height: 40vh;
-	float: left;
 	border: 5px solid var(--off-black);
 	border-radius: 15px;
 }
@@ -68,9 +66,9 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 45vmin;
-	height: 30vmin;
-	margin: 10px;
+	width: 100%;
+	height: 30vh;
+	margin: 10px 0;
 	border: 5px solid #585e8b;
 	border-radius: 15px;
 	transition: box-shadow .4s, translate .4s;
@@ -118,4 +116,25 @@ a {
 
 .bigger {
 	font-size: 2.5em;
+}
+
+@media screen and (min-width: 1000px) {
+	#bio {
+		width: 50%;
+		height: 45vh;
+	}
+
+	#bio > img {
+		float: left;
+	}
+
+	.game-list {
+		flex-direction: row;
+	}
+
+	.game-link {
+		width: 45vmin;
+		height: 30vmin;
+		margin-left: 10px;
+	}
 }
