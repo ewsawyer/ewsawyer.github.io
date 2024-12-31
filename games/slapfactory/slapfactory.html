@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width ,initial-scale=1.0, maximum-scale=1.0">
+	<title>Ethan Sawyer - Game Designer and Programmer</title>
+	<link rel="stylesheet" href="../../styles/common.css">
+	<link rel="stylesheet" href="../../styles/article.css">
+	<link rel="stylesheet" href="../../styles/game.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div id="topbar" class="mobile-only invert">
+		<div id="btn-sidebar" onclick="openSidebar()">|||</div>
+		<p>Ethan Sawyer</p>
+	</div>
+
+	<main>
+		<div id="cover" onclick="closeSidebar()"></div>
+		<div id="sidebar">
+			<img src="/img/me.png" id="my-picture" class="border">
+			<h1 id="my-name">Ethan Sawyer</h1>
+
+			<div class="menu">
+				<a href="../../games.html"><div class="menu-item">Games</div></a>
+				<a href="../../index.html"><div class="menu-item invert">Prototypes</div></a>
+				<a href="../../about.html"><div class="menu-item">About</div></a>
+			</div>
+		</div>
+	
+		
+	<div class="game-content">
+		<div class="demo">
+			<div id="play-selector" class="active clickable">Play</div>
+			<div id="watch-selector" class="clickable">Watch</div>
+			<iframe id="playable" demo-link="https://itch.io/embed-upload/12383393?color=333333" src="hidden" allowfullscreen=""><a href="https://ethansawyer.itch.io/quality-control">Play Slap Factory on itch.io</a></iframe>
+			<iframe id="watchable" class="hidden" src="https://www.youtube-nocookie.com/embed/4IkiCWNBZzU?si=H_dyUtIvlpGETj-D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			<div class="btn-load shimmer">
+				<div></div>
+			</div>
+			<div class="controls">
+				<h2>Controls</h2>
+				<ul>
+					<li><span class="action">SLAP</span> - Space</li>
+					<li><br>press R to quickly restart at any point</li>
+				</ul>
+			</div>
+		</div>
+		
+		<article>
+			<h1 class="game-title">Slap Factory</h1>
+
+			<p>Slap Factory is a 1-button game where you follow ridiculous rules to perform quality checks at a shape factory.
+			</p>
+
+			<p>This prototype was inspired by <a href="https://papersplea.se/">Papers Please</a>, and the comically nightmarish experience of trying to read parking signs here in DC.
+			</p>
+
+			<img src="parking-sign.jpg" width=350 alt="A ridiculous parking sign in dc with many conflicting rules">
+
+			<p>I wanted to make something that emulated the exact feeling of trying to parse a bunch of self-contradicting rules while stopped in the middle of rush-hour traffic, desperate to park your car for less than $30.
+			</p>
+
+			<p>In Slap Factory, you need to keep up with the rules behind you and mash the spacebar a few times to slap away objects that violate those rules before they get past you. If you mess up three times you lose your job.
+			</p>
+
+			<p>Admittedly, the first two levels start a little too slowly. The game is at its best in the 3rd level, when the rules start flip flopping and becoming harder to follow. That’s when playtesters started panicking and really having to think about which products should be slapped away, and when you really understand what it’s like to park your car in the nation’s capital.
+			</p>
+
+			
+		</article>
+	</div>
+
+	</main>
+
+	<script src="../../scripts/sidebar.js"></script>
+	<script src="../../scripts/demo.js"></script>
+</body>
+
+</html>

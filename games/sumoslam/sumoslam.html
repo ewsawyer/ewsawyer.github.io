@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width ,initial-scale=1.0, maximum-scale=1.0">
+	<title>Ethan Sawyer - Game Designer and Programmer</title>
+	<link rel="stylesheet" href="../../styles/common.css">
+	<link rel="stylesheet" href="../../styles/article.css">
+	<link rel="stylesheet" href="../../styles/game.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div id="topbar" class="mobile-only invert">
+		<div id="btn-sidebar" onclick="openSidebar()">|||</div>
+		<p>Ethan Sawyer</p>
+	</div>
+
+	<main>
+		<div id="cover" onclick="closeSidebar()"></div>
+		<div id="sidebar">
+			<img src="/img/me.png" id="my-picture" class="border">
+			<h1 id="my-name">Ethan Sawyer</h1>
+
+			<div class="menu">
+				<a href="../../games.html"><div class="menu-item">Games</div></a>
+				<a href="../../index.html"><div class="menu-item invert">Prototypes</div></a>
+				<a href="../../about.html"><div class="menu-item">About</div></a>
+			</div>
+		</div>
+	
+		
+	<div class="game-content">
+		<div class="demo">
+			<div id="play-selector" class="active clickable">Play</div>
+			<div id="watch-selector" class="clickable">Watch</div>
+			<iframe id="playable" demo-link="https://itch.io/embed-upload/12372947?color=131313" src="hidden" allowfullscreen=""><a href="https://ethansawyer.itch.io/sumo-slam">Play Sumo Slam on itch.io</a></iframe>
+			<iframe id="watchable" class="hidden" src="https://www.youtube-nocookie.com/embed/6S5zNgDyiNM?si=yMFul0c2cWTo9ftc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			<div class="btn-load shimmer">
+				<div></div>
+			</div>
+			<div class="controls">
+				<h2>Controls</h2>
+				<div class="multi-controls">
+					<ul>
+						<h3 class="player-name">Left Player</h3>
+						<li><span class="action">Move</span> - a/d</li>
+						<li><span class="action">Charge a Slam</span> - hold and release w</li>
+						<li><span class="action">Block</span> - hold s</li>
+						<li><span class="action">MENU</span> - escape</li>
+						<li><br>press R at any point to quickly restart</li>
+					</ul>
+					<ul>
+						<h3 class="player-name">Right Player</h3>
+						<li><span class="action">Move</span> - left/right arrows</li>
+						<li><span class="action">Charge a Slam</span> - hold and release up arrow</li>
+						<li><span class="action">Block</span> - hold "down arrow"</li>
+						<li><span class="action">MENU</span> - escape</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<article>
+			<h1 class="game-title">Sumo Slam</h1>
+
+			<p>This is an attempt to make a minimal fighting game that anyone is (hopefully) able to pick up quickly and have fun. There’s only 3 things you can do in Sumo Slam: Move left and right, slam into your opponent, and block incoming slams. Your goal is simply to push the other player off the stage.
+			</p>
+
+			<h2>Indicators</h2>
+			<p>The early versions of Sumo Slam totally failed at being easy to understand because nothing was properly communicated to the player. It was hard to tell who was winning in each encounter, which moves were landing, and there was hardly any juice on the impacts at all. After doing a round of playtests I spent a lot of time working on indicators. Now it’s obvious who’s winning and with what moves, especially thanks to my personal favorite effect: Putting the word “SLAM!” in the background when you land a move.
+			</p>
+
+			<h2>Balance</h2>
+			<p>Because Sumo Slam is symmetric, “balancing” the game meant tweaking each move until none of them were simply “better” than the others in all scenarios. For example, the first version had a huge issue: If you got slammed, your best choice was to simply slam right back, and due to the symmetric nature of the game, your opponent would do the exact same thing, leading to a stalemate.
+			</p>
+
+			<p>By tweaking the timing, power, and speed of each move, I was able to get them in balance with each other. The best strategy is to be unpredictable and try to predict your opponent’s moves ahead of time so you can counter them, which, for a minimal fighting game, is what I was hoping for.
+			</p>
+
+			<h2>Depth of Moveset</h2>
+			<p>My goal of keeping Sumo Slam extremely easy to pick up for people who never play fighting games became a fault at one point. The first few playtested versions didn’t allow the player to charge slams, and blocks always lasted for 1.25 seconds no matter how long you held the button. But after watching several playtests where they all played the same exact way, I bent the ultra-simplicity rule a little bit to allow players to charge slams and drop blocks whenever they wanted. This hardly made the game more challenging to learn, but it allowed people to develop a playstyle and adopt different strategies. It really taught me how to differentiate “simple” vs “boring” and “deep” vs “complicated” in a way I never understood before.
+			</p>
+			
+		</article>
+	</div>
+
+	</main>
+
+	<script src="../../scripts/sidebar.js"></script>
+	<script src="../../scripts/demo.js"></script>
+</body>
+
+</html>

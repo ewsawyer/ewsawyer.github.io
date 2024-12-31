@@ -1,0 +1,218 @@
+.game-title {
+	text-align: left;
+	font-size: 3rem;
+	/* border: 1px solid red; */
+}
+
+main > .game-content {
+	display: block;
+	width: 75%;
+}
+
+article {
+	max-width: 600px;
+	min-width: 300px;
+	padding: 0 20px;
+	text-align: justify;
+}
+
+article > p {
+	margin: 25px 0;
+	line-height: 1.75em;
+}
+
+article > h2 {
+	margin-top: 25px;
+}
+
+#play-selector, #watch-selector, .demo > iframe, .btn-load {
+	border: 3px solid var(--main-color);
+}
+
+#play-selector, #watch-selector {
+	text-align: center;
+	border-bottom: none;
+	font-size: 1.25rem;
+	line-height: 30px;
+}
+
+#play-selector:not(.active), #watch-selector:not(.active) {
+	cursor: pointer;
+}
+
+#play-selector {
+	grid-area: play;
+	border-top-left-radius: var(--standard-radius);
+}
+
+#watch-selector {
+	grid-area: watch;
+	border-top-right-radius: var(--standard-radius);
+}
+
+.btn-load {
+	grid-area: content;
+	display: flex;
+	align-items: center;
+	background-color: var(--exciting-color);
+	cursor: pointer;
+	font-size: 2rem;
+}
+
+.shimmer {
+	background-size: 200% 200%;
+	background-position: 160% 50%;
+	background-repeat: no-repeat;
+	background-image: 
+		linear-gradient(135deg, #0000 40%, rgba(255, 255, 255, 0.074) 50%, #0000 60%) ;
+}
+
+.shimmer:hover {
+	animation: 3s infinite shine;
+}
+
+.btn-load.fully-hidden {
+	display: none;
+}
+
+.btn-load > div {
+	width: 100%;
+	padding: 40px 0;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: var(--standard-radius);
+}
+
+.btn-load > div::after {
+	content: "Click to load demo";
+}
+
+.demo > iframe {
+	grid-area: content;
+	/* border-radius: 0px 0px var(--standard-radius) var(--standard-radius); */
+	aspect-ratio: 980/640;
+	width: 100%;
+}
+
+#unity-canvas, #unity-container {
+	width: 100%;
+}
+
+iframe > *:focus {
+	border: none;
+	outline: none;
+}
+
+.demo {
+	width: 100%;
+	height: auto;
+	margin: 30px auto;
+	
+	display: grid;
+	grid-template-rows: 35px min-content min-content;
+	grid-template-columns: 50% 50%;
+	grid-template-areas: 
+		"play watch"
+		"content content"
+		"controls controls";
+}
+
+.controls {
+	border: 3px solid var(--main-color);
+	border-top: none;
+	border-radius: 0 0 var(--standard-radius) var(--standard-radius);
+	padding: 10px;
+	grid-area: controls;
+	background-color: var(--low-em-bg-color);
+}
+
+.multi-controls {
+	margin-top: 10px;
+	display: flex;
+	align-items: stretch;
+	/* border: 1px solid red; */
+}
+
+.player-name {
+	text-decoration: underline;
+	font-style: italic;
+	margin-bottom: 5px;
+}
+
+.multi-controls ul {
+	display: block;
+	/* border: 1px solid blueviolet; */
+	flex: 1 1 0;
+}
+
+.action {
+	font-weight: bold;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+.controls li {
+	list-style: none inside;
+}
+
+ol {
+	list-style-position: inside;
+}
+
+.recognitions {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 200px;
+	width: 100%;
+}
+
+.recognitions > * {
+	flex: 0 1 200px;
+	display: block;
+}
+
+.recognitions img {
+	display: block;
+	max-width: 100%;
+}
+
+.image-section > img {
+	display: block;
+}
+
+.demo.video-only {
+	margin-top: 35px;
+	aspect-ratio: 2056/1329;
+	width: 100%;
+	border: 3px solid var(--main-color);
+	border-radius: var(--standard-radius);
+}
+
+@keyframes shine {
+	60%, 100% {
+		background-position: -150% 50%;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	main {
+		padding: 0;
+	}
+	
+	main > .game-content {
+		min-width: none;
+		max-width: 100%;
+		width: 100%;
+		margin: 0;
+		padding: 0 15px;
+	}
+
+	.btn-load {
+		font-size: 1.25rem;
+	}
+
+	.btn-load > div::after {
+		content: "Click to load demo (touchscreens not supported)";
+	}
+}

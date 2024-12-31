@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width ,initial-scale=1.0, maximum-scale=1.0">
+	<title>Ethan Sawyer - Game Designer and Programmer</title>
+	<link rel="stylesheet" href="../../styles/common.css">
+	<link rel="stylesheet" href="../../styles/article.css">
+	<link rel="stylesheet" href="../../styles/game.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div id="topbar" class="mobile-only invert">
+		<div id="btn-sidebar" onclick="openSidebar()">|||</div>
+		<p>Ethan Sawyer</p>
+	</div>
+
+	<main>
+		<div id="cover" onclick="closeSidebar()"></div>
+		<div id="sidebar">
+			<img src="/img/me.png" id="my-picture" class="border">
+			<h1 id="my-name">Ethan Sawyer</h1>
+
+			<div class="menu">
+				<a href="../../games.html"><div class="menu-item invert">Games</div></a>
+				<a href="../../index.html"><div class="menu-item">Prototypes</div></a>
+				<a href="../../about.html"><div class="menu-item">About</div></a>
+			</div>
+		</div>
+	
+		
+	<div class="game-content">
+
+		<video style="aspect-ratio: 1920/1080;" controls playsinline preload="metadata" id="watchable" class="demo video-only"><source src="https://video.wixstatic.com/video/ca4dcc_c4c67fd0d9664e188724a0ad24c4e4ab/1080p/mp4/file.mp4" type="video/mp4"></video>
+		<div class="recognitions">
+			<a href="https://www.gamedevsofcolorexpo.com/"><img src="./gdoc.png" alt="GDOC logo"></a>
+			<a href="https://store.steampowered.com/sale/IndieCadeFestival2024?tab=3"><img src="./indiecade.avif" alt="IndieCade logo"></a>
+			<a href="https://www.mdevconf.com/"><img src="./mdev.avif" alt="MDEV logo"></a>
+		</div>
+		<div class="info border">
+			<p><strong>Role: </strong>Technical Designer</p>
+			<p><a href="https://store.steampowered.com/app/2858430/Lake_Minnewaska/">Available for free on steam!</a></p>
+			<p><a href="https://lmthegame.com">Official game website</a></p>
+		</div>
+		
+		<article>
+			<h1 class="game-title">Lake Minnewaska</h1>
+			<p>Lake Minnewaska is a fishing and narrative game that tells the story of a lonesome fisherman in western Minnesota. This was a project made by myself and a studio of about 30 other USC students over the course of one school year.
+			</p>
+
+			
+			<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/nfa5xCladP8?si=mLcHIgGGrv3KV1YH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+			
+			<h2>Casting</h2>
+			<p>Part of my job on Lake Minnewaska was to make the casting of the fishing line feel right, including all the hand and rod movement, and the trajectory of the cast. We wanted to make our fishing mechanic very simple, as the game was more about catching fish than the actual act of fishing.
+			</p>
+			<video preload="metadata" controls playsinline><source src="./cast.mp4" type="video/mp4"></source></video>
+
+			<h2>Journal</h2>
+			<p>We wanted to tell a story about grief via the act of fishing, and I, along with the project’s other designer, had to come up with a way of doing so. We decided to give Sosa (the main character), a list of fish that his young daughter wanted to catch with him, and send the player around the lake looking for these fish. As they crossed them off the list, Sosa would journal his thoughts and recall memories with his daughter related to each one.  
+			</p>
+			<img src="./journal-page1.png" class="border" alt="A screen capture of the journal">
+
+
+
+		</article>
+	</div>
+
+	</main>
+
+	<script src="../../scripts/sidebar.js"></script>
+	<script src="../../scripts/demo.js"></script>
+</body>
+
+</html>

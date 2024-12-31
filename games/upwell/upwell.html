@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width ,initial-scale=1.0, maximum-scale=1.0">
+	<title>Ethan Sawyer - Game Designer and Programmer</title>
+	<link rel="stylesheet" href="../../styles/common.css">
+	<link rel="stylesheet" href="../../styles/article.css">
+	<link rel="stylesheet" href="../../styles/game.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div id="topbar" class="mobile-only invert">
+		<div id="btn-sidebar" onclick="openSidebar()">|||</div>
+		<p>Ethan Sawyer</p>
+	</div>
+
+	<main>
+		<div id="cover" onclick="closeSidebar()"></div>
+		<div id="sidebar">
+			<img src="/img/me.png" id="my-picture" class="border">
+			<h1 id="my-name">Ethan Sawyer</h1>
+
+			<div class="menu">
+				<a href="../../games.html"><div class="menu-item">Games</div></a>
+				<a href="../../index.html"><div class="menu-item invert">Prototypes</div></a>
+				<a href="../../about.html"><div class="menu-item">About</div></a>
+			</div>
+		</div>
+	
+		
+	<div class="game-content">
+		<div class="demo">
+			<div id="play-selector" class="active clickable">Play</div>
+			<div id="watch-selector" class="clickable">Watch</div>
+			<iframe id="playable" frameborder="0" demo-link="https://itch.io/embed-upload/12361035?color=161616" src="about:blank" allowfullscreen=""><a href="https://ethansawyer.itch.io/up-well">Play Up-Well on itch.io</a></iframe>
+			<iframe id="watchable" class="hidden" src="https://www.youtube-nocookie.com/embed/dwyArTnDmOw?si=0XiQmHysyIZ1vai7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			<div class="btn-load shimmer">
+				<div></div>
+			</div>
+			<div class="controls">
+				<h2>Controls</h2>
+				<ul>
+					<li><span class="action">Aim</span> - mouse</li>
+					<li><span class="action">Shoot</span> - left click</li>
+					<li><span class="action">Slo-mo</span> - hold: space/right click</li>
+					<li><br>press R at any point to quickly restart</li>
+				</ul>
+			</div>
+		</div>
+		
+		<article>
+			<h1 class="game-title">Up-Well</h1>
+
+			<p>Up-Well is a lot like Downwell, but up. And with more slippery controls. My goal was to make something difficult that you’d want to keep throwing yourself at over and over again.
+			</p>
+
+			<p>In Up-Well, you play as a little square who flies around by firing projectiles, trying to ascend a tower filled with evil circles that must be defeated to progress higher.
+			</p>
+
+			<p>The character controller started as a little square with a boxing glove on a spring, who could bounce around a level by punching the ground, walls, and enemies. This was unsatisfying to master, however, so I started playing around with some of the movement parameters.
+			</p>
+
+			<p>Eventually I got a character that punched five times per second, and didn’t rely on walls to bounce off of. This was immediately a lot more fun, so I started taking the prototype farther in this direction, and re-wrote the character controller to support it better.
+			</p>
+
+			<p>After some hasty level design, I did a few playtests with other game students at USC. Most of them enjoyed the game, and would play it over and over until they all started getting frustrated with the same thing: shooting upwards.
+			</p>
+
+			<p>Since your goal is to ascend, you often have enemies directly above you, and because you get a small boost in the opposite direction of the shot, attacking these enemies usually caused people to zoom downwards and die.
+			</p>
+
+			<p>I could tell this was pissing people off (and not in a fun “this-game-is-so-hard!” way), but I actually liked having to shoot upwards. In my own playtests, I survived these situations by quickly aiming upwards, taking a single shot at the enemy, and then flicking my cursor back down to keep flying higher. It felt like a cool movement to me, but it annoyed other people.
+			</p>
+
+			<p>The solution was slow-motion. Now, players can activate bullet time when they need to slow things down and pick off a few enemies without plummeting to their deaths. It doesn’t last very long and it needs to recharge after every use, but this made a huge difference. It allowed players to use a cool strategy that I had discovered during development without having to discover and learn the obscure idea of flicking their aim around on their own. <strong>Bullet time made the game about 10% easier, but 90% more accessible.</strong>
+			</p>
+
+			<p>It would’ve been a lot simpler to just flip the level around so you go down instead of up, and enemies would never be above you, but I like this solution more. Flipping the level would have made the game play a lot more like Downwell, and it would have been a missed opportunity to try and find a more fun solution.
+			</p>
+		</article>
+	</div>
+
+	</main>
+
+	<script src="../../scripts/sidebar.js"></script>
+	<script src="../../scripts/demo.js"></script>
+</body>
+
+</html>

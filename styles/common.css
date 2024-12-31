@@ -1,0 +1,194 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root
+{
+	--main-bg-color: #202934;
+	--main-color: #dedede;
+	--header-font: "Bebas Neue", serif;
+	--main-font: "Raleway", serif;
+	--standard-radius: 10px;
+	--shadow-color: #4c5662;  /* different shade of --main-bg-color */
+	--light-shadow-color: #4c5662;  /* different shade of --main-bg-color */
+	--shadow-offset: 4px;
+	--low-em-bg-color: #b3b3b318;
+	--exciting-color: #BA274A;
+}
+
+body {
+	background-color: var(--main-bg-color);
+	color: var(--main-color);
+	font-family: var(--main-font);
+	font-size: 1rem;
+}
+
+h1 {
+	font-family: var(--header-font);
+	letter-spacing: 2px;
+}
+
+main {
+	min-width: 1000px;
+	width: 90%;
+	max-width: 1400px;
+	margin: 0px auto;
+	overflow: visible;
+}
+
+main {
+	display: flex;
+	align-items: start;
+}
+
+/* To increase the specificity above other classes. Janky */
+html > body .hidden {
+	display: none;
+}
+
+main > * {
+	margin: 0 20px;
+}
+
+.mobile-only {
+	display: none;
+}
+
+.clickable:not(.active):hover {
+	background-color: var(--low-em-bg-color);
+	cursor: pointer;
+}
+
+#sidebar {
+	flex: 0 0 0;
+	position: sticky;
+	top: 0px;
+	min-width: 300px;
+	max-width: 300px;
+	height: 100vh;
+	border-right: 5px solid var(--main-color);
+	padding-top: 50px;
+}
+
+#cover {
+	display: none;
+}
+
+#my-picture {
+	display: block;
+	margin: 0 auto;
+	width: 200px;
+}
+
+#my-name {
+	text-align: center;
+	font-size: 2.7rem;
+}
+
+a {
+	color: unset;
+	text-decoration: unset;
+}
+
+.border {
+	border: 3px solid var(--main-color); 
+	border-radius: var(--standard-radius);
+}
+
+.invert, .active {
+	color: var(--main-bg-color);
+	background-color: var(--main-color);
+}
+
+.menu {
+	width: 60%;
+	margin-top: 1em;
+	margin-left: 40%;
+}
+
+.menu-item {
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-align: right;
+	padding: 15px 53px 15px 25px;
+	border-radius: 12px 0 0 12px;
+}
+
+.menu-item:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+	#my-name {
+		text-align: center;
+	}
+	
+	main {
+		display: block;
+		min-width: 0px;
+		width: 100vw;
+	}
+
+	.mobile-only {
+		display: block;
+	}
+
+	#topbar {
+		position: sticky;
+		display: flex;
+		top: 0px;
+		font-family: var(--header-font);
+		font-size: 2rem;
+		padding: 5px 12px;
+	}
+	
+	#topbar > p {
+		flex: 1 1 0;
+		display: block;
+		text-align: center;
+		transform: translate(-16px, 0px);
+		margin: 0 5px;
+	}
+
+	#btn-sidebar {
+		display: block;
+		transform: translate(0px, -4px) rotate(90deg);
+		letter-spacing: -5px;
+		cursor: pointer;
+		/* float: left; */
+		/* border: 1px solid red; */
+	}
+
+	#sidebar {
+		position: fixed;
+		top: 0px;
+		bottom: 0px;
+		min-width: 250px;
+		max-width: 250px;
+		margin-left: 0;
+		background-color: var(--main-bg-color);
+		transform: translate(-250px);
+		transition: transform 0.15s;
+	}
+
+	#sidebar.open {
+		transform: translate(0px);
+		transition: transform 0.15s;
+	}
+
+	#cover {
+		background-color: #00000000;
+	}
+
+	#cover.open {
+		display: block;
+		position: fixed;
+		top: 0px;
+		bottom: 0px;
+		width: 100vw;
+		background-color: #1e1e1ec8;
+ 	}
+}

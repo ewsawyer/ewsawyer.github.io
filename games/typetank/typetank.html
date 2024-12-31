@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width ,initial-scale=1.0, maximum-scale=1.0">
+	<title>Ethan Sawyer - Game Designer and Programmer</title>
+	<link rel="stylesheet" href="../../styles/common.css">
+	<link rel="stylesheet" href="../../styles/article.css">
+	<link rel="stylesheet" href="../../styles/game.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div id="topbar" class="mobile-only invert">
+		<div id="btn-sidebar" onclick="openSidebar()">|||</div>
+		<p>Ethan Sawyer</p>
+	</div>
+
+	<main>
+		<div id="cover" onclick="closeSidebar()"></div>
+		<div id="sidebar">
+			<img src="/img/me.png" id="my-picture" class="border">
+			<h1 id="my-name">Ethan Sawyer</h1>
+
+			<div class="menu">
+				<a href="../../games.html"><div class="menu-item">Games</div></a>
+				<a href="../../index.html"><div class="menu-item invert">Prototypes</div></a>
+				<a href="../../about.html"><div class="menu-item">About</div></a>
+			</div>
+		</div>
+	
+		
+	<div class="game-content">
+		<div class="demo">
+			<div id="play-selector" class="active clickable">Play</div>
+			<div id="watch-selector" class="clickable">Watch</div>
+			<iframe id="playable" frameborder="0" demo-link="https://itch.io/embed-upload/12382076?color=333333" src="about:blank" allowfullscreen=""><a href="https://ethansawyer.itch.io/type-tank">Play Type Tank on itch.io</a></iframe>
+			<iframe id="watchable" class="hidden" src="https://www.youtube-nocookie.com/embed/v5viGhwJpGQ?si=VJIbRkYVnKOsJQAW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			<div class="btn-load shimmer">
+				<div></div>
+			</div>
+			<div class="controls">
+				<h2>Controls</h2>
+				<ul>
+					<li><span class="action">Type</span> what you want the tank to do</li>
+					<li><span class="action">Press Enter/Space</span> to make the tank do what you typed</li>
+					<li><br>Commands:</li>
+					<li><span class="action">Fire</span> - "fire"</li>
+					<li><span class="action">Move</span> - "up"/"right"/"down"/"left"</li>
+					<li><span class="action">Aim</span> - type "aim" + a direction (for example AIMNE or AIMS)</li>
+					<li><br>press ctrl+R at any point to restart the game</li>
+				</ul>
+			</div>
+		</div>
+		
+		<article>
+			<h1 class="game-title">Type Tank</h1>
+
+			<p>This is a typing game where you control a tank by typing commands for it to follow. For example, “LEFT” to move left. “AIMSE” to aim southeast, and “FIRE” to shoot. This prototype was made with a fellow USC Games student who handled all the artwork for the game, and some of the visual effects.
+			</p>
+
+			<p>I used to play a lot of typing games as a kid, but no matter what the theming was, they all boiled down to just typing words as fast as possible. Later on though, I played <a href="https://store.steampowered.com/app/940680/The_Textorcist_The_Story_of_Ray_Bibbia/">The Textorcist</a>, a bullet hell typing game where you move with the arrow keys and type latin exorcisms to defeat demons from hell.
+			</p>
+
+			<p>This was a lot more fun than the standard typing games I used to play, but having to do arrow-key movement while typing with my other hand was more than my simple mind can handle. The goal with Type Tank was to make a version of The Textorcist where all actions took place via typing, and also that normal people could succeed at.
+			</p>
+
+			<p>If we wanted to make a game where even your movement had to be typed out, we needed to break the battlefield up into something less continuous. We used a square grid that players navigate by typing “UP”, “RIGHT”, “DOWN”, or “LEFT”.
+			</p>
+
+			<p>Aiming is also discrete in Type Tank. Originally we allowed players to enter rotations in increments of 45 degrees, but this was a lot of math for people to think about and we quickly switched to using cardinal directions instead. For example, to aim up and to the right, you type “AIMNE”, short for “Aim Northeast”.
+			</p>
+
+			<p>We blocked out a level, threw some enemies in, and ran some playtests on campus. Type Tank quickly captured people’s interest, but didn’t hold it for long. There’s only one level and the enemies start feeling flat after a while. Typing the same commands over and over again also gets tedious eventually.
+			</p>
+
+			<p>I think there’s more potential here, if we incentivized the player to move around more (maybe to pick up ammo/health) and gave them more words to type (special words that pop up and grant temporary powerups), but I’m happy with the core gameplay we got and this is where Type Tank will stay for now.
+			</p>
+
+		</article>
+	</div>
+
+	</main>
+
+	<script src="../../scripts/sidebar.js"></script>
+	<script src="../../scripts/demo.js"></script>
+</body>
+
+</html>
