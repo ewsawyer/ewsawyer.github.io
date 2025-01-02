@@ -31,16 +31,14 @@ h1 {
 }
 
 main {
+	display: flex;
+	align-items: start;
+
 	min-width: 1000px;
 	width: 90%;
 	max-width: 1400px;
 	margin: 0px auto;
 	overflow: visible;
-}
-
-main {
-	display: flex;
-	align-items: start;
 }
 
 /* To increase the specificity above other classes. Janky */
