@@ -215,4 +215,8 @@ ol {
 	.btn-load > div::after {
 		content: "Click to load demo (touchscreens not supported)";
 	}
+
+	.btn-load.touchscreens-supported > div::after {
+		content: "Tap to load demo";
+	}
 }
