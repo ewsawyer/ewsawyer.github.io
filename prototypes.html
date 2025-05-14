@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width ,initial-scale=1.0, maximum-scale=1.0">
+	<title>Ethan Sawyer - Game Designer and Programmer</title>
+	<link rel="stylesheet" href="styles/common.css">
+	<link rel="stylesheet" href="styles/cards.css">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	
+	<div id="topbar" class="mobile-only invert">
+		<div id="btn-sidebar" onclick="openSidebar()">|||</div>
+		<p>Ethan Sawyer</p>
+	</div>
+
+	<main>
+		<div id="cover" onclick="closeSidebar()"></div>
+		<div id="sidebar">
+			<img src="img/me.png" id="my-picture" class="border">
+			<h1 id="my-name">Ethan Sawyer</h1>
+
+			<div class="menu">
+				<a href="index.html"><div class="menu-item">Games</div></a>
+				<a href="prototypes.html"><div class="menu-item invert">Prototypes</div></a>
+				<a href="about.html"><div class="menu-item">About</div></a>
+			</div>
+		</div>
+		
+		<div id="content">
+			<a class="card" href="./games/upwell/upwell.html">
+				<video autoplay loop muted playsinline><source src="./games/upwell/cutdown.mp4" type="video/mp4"></source></video>
+				<div class="card-title invert">Upwell</div>
+				<div class="description invert">Goal: Make something difficult that people can't stop throwing themselves at</div>
+			</a>
+			<a class="card" href="./games/sumoslam/sumoslam.html">
+					<video autoplay loop muted playsinline><source src="./games/sumoslam/cutdown.mp4" type="video/mp4"></source></video>
+					<div class="card-title invert">Sumo Slam</div>
+					<div class="description invert">Ultra-minimalist sumo-wrestling game for two</div>
+			</a>
+			<a class="card" href="./games/typetank/typetank.html">
+				<video autoplay loop muted playsinline><source src="./games/typetank/cutdown.mp4" type="video/mp4"></source></video>
+				<div class="card-title invert">Type Tank</div>
+				<div class="description invert">A frenzied arcade game where you control a tank by typing</div>
+			</a>
+			<a class="card" href="./games/slapfactory/slapfactory.html">
+				<video autoplay loop muted playsinline><source src="./games/slapfactory/cutdown.mp4" type="video/mp4"></source></video>
+				<div class="card-title invert">Slap Factory</div>
+				<div class="description invert">A one-button game about following ridiculous rules</div>
+			</a>
+			<a class="card" href="./games/dongclangboom/dongclangboom.html">
+				<video autoplay loop muted playsinline><source src="./games/dongclangboom/cutdown.mp4" type="video/mp4"></source></video>
+				<div class="card-title invert">Dong Clang Boom</div>
+				<div class="description invert">Making a single action as satisfying as possible</div>
+			</a>
+		</div>
+	</main>
+
+	<script src="./scripts/sidebar.js"></script>
+</body>
+</html>
