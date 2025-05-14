@@ -37,11 +37,10 @@
 		
 	<div class="game-content">
 
-		<iframe id="watchable" class="demo video-only" src="https://www.youtube.com/embed/GHZaoBkFQ_Q?si=nfJn8Mh60sJvTG3I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		<iframe id="watchable" class="demo video-only" src="https://www.youtube.com/embed/VRszdcuxkrM?si=-xpigfpK8fjwJQZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 		<div class="info border">
+			<iframe src="https://store.steampowered.com/widget/3506250/" frameborder="0" width="646" height="190"></iframe>
 			<p><strong>Role: </strong>Director</p>
-			<p><em>Releasing <strong>Tuesday, May 13th</strong> at the 2025 USC Games Expo.</em></p>
-			<p>Scare Crow is a humorous 3rd person <strong>stealth/tower-defense</strong> game where you play as a crow, <strong>pulling pranks on squirrels</strong> to scare them away from your food</p>
 			<div class="link-bar">
 				<a href="https://store.steampowered.com/app/3506250/Scare_Crow/" target="_blank"><img src="../../img/steam.png"></a>
 				<a href="https://www.instagram.com/scarecrowgame/" target="_blank"><img src="../../img/instagram.png"></a>
@@ -52,31 +51,83 @@
 		
 		<article>
 			<h1 class="game-title">Scare Crow</h1>
-			<p>In Scare Crow you fend off waves of invading squirrels by setting traps, lures, and hiding spots, which you then trigger at the perfect moment as the squirrels walk by. Get it right, and they'll run off your lawn screaming their heads off
-			</p>
 
-			<h2>Greenlight</h2>
-			<p>Scare Crow was one of 55 pitches made to USC Games in Spring 2024. After a 2-step greenlight process, my pitch was one of 8 that were given the green!
+			<h2>Prototype</h2>
+			<p>Scare Crow was one of 55 titles pitched to USC Games in Spring 2024. After a 2-step greenlight process, my pitch was one of 8 that were given the green!
 			</p>
-			<p>If you make it through greenlighting, you become the creative director of a studio at USC, and have to attract other students to work on the game with you. After personally holding over 70 interviews with potential candidates, I put together the 30 best I could find and got to work.
+			<p>Once you're through greenlighting, you become the creative director of a studio at USC, and have to attract other students to work on the game with you. After holding over 70 in-person interviews with potential candidates, I put together a team of 30 and got to work.
 			</p>
 
 			<video preload="metadata" controls playsinline><source src="./greenlight.mp4" type="video/mp4"></source></video>
+			<p class="caption">Prototype for Scare Crow's greenlight pitch.</p>
 
-			<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/nfa5xCladP8?si=mLcHIgGGrv3KV1YH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-
-			<h2>Pre-Pre-Production</h2>
-			<p>Over the summer of 2024, me and a small subset of the team worked on the basic elements of gameplay: flying around, scaring squirrels, and setting traps. We had a lot of failed experiments during this time, but it was great practice for myself and the rest of the team, and taught us a lot about what we wanted to make: an accessible, cartoonish game about defending territory that people would laugh all the way through.
+			<h2>Design Challenges</h2>
+			<p>
+				Scare Crow is a mixture of stealth and tower defense, which means there weren’t a lot of games to look to for inspiration or to "steal" solutions from when we had issues.
+				Here are some of the biggest challenges we faced:
 			</p>
 
-			<h2>Pre-Production</h2>
-			<p>As our summer experiments wound down, I set a goal for the team: at the end of Fall, we would have an unpolished, playable version of the final game that made sense to newbies and evoked the humorous, sneaky emotions we were going for. 
+			<h3>Squirrel Behavior</h3>
+			<p>
+				In Scare Crow, your enemies are squirrels that come into your backyard home and try to get to a bird feeder to eat the food inside. 
+				In early versions of Scare Crow, they would choose their own path to the feeder by finding and seeking cover. 
+				We actually rejected the idea of having set paths because we wanted the squirrels to have more “depth”.
 			</p>
-			<p>Since this was still pre-production, the smaller details of design were very malleable and changed every week as we ran playtests. The main thing I did as director was help pick which changes to make, commit to them early and make sure everybody knew about them. The rest I owe to my wonderful team.
+			<p>
+				In playtests, this was a disaster. Nobody could figure out where the squirrels were at, or where they were going next. Their decision making process was too opaque and too unpredictable, which turned the game into a squirrel chasing simulator where players just ran around attacking squirrels without using any strategy at all. 
 			</p>
 
-			<h2>Production</h2>
-			<p>(Update May 11th 2025: production retrospective coming soon)
+			<img src="chasing-squirrels.gif" alt="Example of a player chasing after squirrels">
+			<p class="caption">A playtester chases after squirrels in a build from October 2024.</p>
+	
+			<p>
+				Putting squirrels along paths like in a traditional TD game solved this problem instantly. It gave players enough information to make plans for the future instead of just running after their quarry.
+			</p>
+
+			<img src="example-path.png" alt="Example path from finished version of Scare Crow">
+			<p class="caption">The path for Wave 1.</p>
+
+			<h3>Level Design</h3>
+			<p>
+				Initially I was tempted to think, since the general layout of each level would be the same, that we couldn’t consider the gameplay of each wave until we designed the whole backyard first. I essentially directed my team to create a backyard, and then fill it with gameplay. This made the levels feel directionless, like we had just shoved a game into some random 3d model of a backyard.
+			</p>
+
+			<img src="early-level.webp" alt="Screenshot of an early version of Scare Crow's first level">
+			<p class="caption">An early iteration of Scare Crow's first level.</p>
+
+			<p>
+				After some reflecting I decided to have my designers re-do the layout of the levels with a new process. Instead of a whole backyard, I asked them to sketch out each wave individually, creating a little fragment of a yard to house each one. Then, we combined all the little fragments for each wave into a single backyard, merging and overlapping various features from each one.
+			</p>
+			<p>
+				This new approach molded the environment to the gameplay instead of the other way around, and helped the levels feel a lot less arbitrary.
+			</p>
+
+			<img src="both-levels.png" alt="Both levels side by side">
+			<p class="caption">Scare Crow's two levels. The finished version ended up being more much more compact than the original.</p>
+
+			<h3>Stealth</h3>
+			<p>
+				Scare Crow started out as an even split between stealth and tower defense, but over time the balance shifted. We discovered that the fun of Scare Crow is less about sneaking around and more about setting up traps and having hilarious interactions with stupid squirrels. 
+			</p>
+			<p>
+				Luckily, we never lost the stealth aspect of the game. You still have to avoid detection if you want to be successful, and hiding out for an ambush is a great strategy. But features like “squirrel hearing” didn’t add much to the experience, and I’m glad we focused more of our time on the interactions with squirrels themselves.
+			</p>
+
+			<h2>Directing a Game</h2>
+			<p>
+				I pitched Scare Crow as a junior and got greenlit at the end of that school year. I had never directed a game before and frankly I had no idea what I was doing at first. 
+			</p>
+
+			<h3>What does a director even do?</h3>
+			<p>
+				This answer isn’t going to fit all directors, but after a lot of reflection, this is what I’d say to anyone who was going to be a first-time director:
+			</p>
+			<p>
+				Directors are basically teachers. You help a big group of different people learn how to fit their unique ideas and artistic sensibilities all into the same game. When people share their ideas, you have to advocate for and protect the overarching qualities that you want your game to have, but still allow it to be shaped by the discoveries of your team. Your job is basically to help people discover and understand what your vision is so they can all learn how to express their personal flavors to collectively form a cohesive work.
+			</p>
+			<p>
+				Also, when it comes down to the wire, you need to get yourself in the engine and make things happen. I don’t recommend stepping on people’s toes like this often, but chances are, this game means more to you than anyone.
+				And take good care of your teammates. Years from now, people might not remember what exactly they worked on, but they'll remember what it was like to be on your team.
 			</p>
 		</article>
 	</div>

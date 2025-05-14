@@ -1,10 +1,13 @@
-article > img {
+article img {
 	display: block;
 	width: 75%;
-	margin-bottom: 25px;
 }
 
-article > video {
+article h2, article h3, article p {
+	margin-top: 25px;
+}
+
+article video {
 	width: 100%;
 }
 
