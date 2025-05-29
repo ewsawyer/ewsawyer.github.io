@@ -9,19 +9,6 @@ main > .game-content {
 	width: 75%;
 }
 
-article {
-	max-width: 700px;
-	min-width: 300px;
-	padding: 0 30px;
-	padding-bottom: 30px;
-	text-align: justify;
-}
-
-article p {
-	margin: 25px 0;
-	line-height: 1.75em;
-}
-
 details > div > p:first-of-type {
 	margin-top: 0px;
 }

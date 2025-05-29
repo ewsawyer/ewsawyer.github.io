@@ -50,6 +50,19 @@ main > * {
 	margin: 0 20px;
 }
 
+article p {
+	margin: 25px 0;
+	line-height: 1.75em;
+}
+
+article {
+	max-width: 700px;
+	min-width: 300px;
+	padding: 0 30px;
+	padding-bottom: 30px;
+	text-align: justify;
+}
+
 .mobile-only {
 	display: none;
 }
