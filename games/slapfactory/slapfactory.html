@@ -21,7 +21,11 @@
 		<p>Ethan Sawyer</p>
 	</div>
 
-	<main>
+		<main>
+		<div id="examine-overlay">
+			<div id="examine-container"></div>
+		</div>
+
 		<div id="cover" onclick="closeSidebar()"></div>
 		<div id="sidebar">
 			<img src="/img/me.png" id="my-picture" class="border">
@@ -63,7 +67,7 @@
 			<p>This prototype was inspired by <a href="https://papersplea.se/">Papers Please</a>, and the comically nightmarish experience of trying to read parking signs here in DC.
 			</p>
 
-			<img src="parking-sign.jpg" width=350 alt="A ridiculous parking sign in dc with many conflicting rules">
+			<img src="parking-sign.jpg" alt="A ridiculous parking sign in dc with many conflicting rules">
 
 			<p>I wanted to make something that emulated the exact feeling of trying to parse a bunch of self-contradicting rules while stopped in the middle of rush-hour traffic, desperate to park your car for less than $30.
 			</p>
@@ -90,6 +94,7 @@
 
 	<script src="../../scripts/sidebar.js"></script>
 	<script src="../../scripts/demo.js"></script>
+	<script src="../../scripts/examinables.js"></script>
 </body>
 
 </html>

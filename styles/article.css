@@ -2,6 +2,7 @@ article img {
 	display: block;
 	width: 75%;
 	margin: 10px 0;
+	cursor: pointer;
 }
 
 article h2, article h3, article p {

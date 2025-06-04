@@ -22,6 +22,9 @@
 	</div>
 
 	<main>
+		<div id="examine-overlay">
+			<div id="examine-container"></div>
+		</div>
 		<div id="cover" onclick="closeSidebar()"></div>
 		<div id="sidebar">
 			<img src="/img/me.png" id="my-picture" class="border">
@@ -64,30 +67,33 @@
 
 			<p>For the I-70 Rest Stop level, I started by jotting down the narrative, and created this level flow diagram.</p>
 
-			<img src="img/level flow.png" alt="">
+			<img src="img/level flow.png" alt="" class="examinable">
 			<p class="caption">In this level, your desperate search for a bathroom leads to the discovery of a massive cover-up...</p>
 
 			<p>Then, I sketched out a few drafts for the layout of the level.</p>
 
-			<img src="img/zeroth draft.png" alt="">
+			<img src="img/zeroth draft.png" alt="" class="examinable">
 			<p class="caption">Zeroth draft. Basic layout to match narrative beats.</p>
-			<img src="img/first draft.png" alt="">
+			<img src="img/first draft.png" alt="" class="examinable">
 			<p class="caption">First draft. Layout basic structures.</p>
-			<img src="img/second draft.png" alt="">
+			<img src="img/second draft.png" alt="" class="examinable">
 			<p class="caption">Second draft. Add details to create a blueprint for blockout.</p>
 
 			<p>The “zeroth” draft is just to get the basics down and make sure the narrative will flow through the space correctly. The first draft is useful for massing and actually creating the architecture of the space, and the second draft cleans everything up and adds all the details necessary to create a good blockout.</p>
 
-			<p>My goal with these layout sketches is to create a literal blueprint for my blockout. I want something that I can drop into a plane in Unreal and start placing objects on top of.</p>
+			<p>My goal with these layout sketches is to create a literal blueprint for my blockout. I want something that I can onto a plane in Unreal and start placing objects on top of.</p>
 
 			<h2>Blockout</h2>
 			<p>With my layout sketches in hand, I jumped into UE5 and started building the level in 3D. To make things easier, I imported my layout sketches and put them on a giant plane so I could see where all the basic shapes would go in relation to each other.</p>
-
+			
 			<p>With that, massing was easy, and using UE5’s modeling tools I quickly had a basic version of the level ready to play. At this stage, I was okay with abstract environments. I just wanted to get the scale, lines of sight, and basic wayfinding in place. All these things would be much harder to fix if I made a detailed environment from the start, because that would mean more things to move and re-make for each of these big, macro-level changes.</p>
 
+			<img src="./img/massing.png" alt="" class="examinable">
+			<p class="caption">Massing and blockout for level taking place in Minneapolis skyway system.</p>
+			
 			<h2>Blockmesh</h2>
 			<p>For me, it’s useful to distinguish blockout from blockmesh: Blockout is an extremely simple first pass with basic shapes. It helps me do massing, set the general layout, and solve big usability problems early on. Blockmesh, on the other hand, is more representational, and solves some of the usability problems from the first round of playtests.</p>
-
+			
 			<img src="img/minneapolis_out.png" alt="">
 			<p class="caption">BlockOUT of the starting area of my Minneapolis level.</p>
 			<img src="img/minneapolis_mesh.png" alt="">
@@ -134,6 +140,7 @@
 
 	<script src="../../scripts/sidebar.js"></script>
 	<script src="../../scripts/demo.js"></script>
+	<script src="../../scripts/examinables.js"></script>
 </body>
 
 </html>
