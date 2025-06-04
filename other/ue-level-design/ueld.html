@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width ,initial-scale=1.0, maximum-scale=1.0">
+	<title>Ethan Sawyer - Game Designer and Programmer</title>
+	<link rel="stylesheet" href="../../styles/common.css">
+	<link rel="stylesheet" href="../../styles/article.css">
+	<link rel="stylesheet" href="../../styles/game.css">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div id="topbar" class="mobile-only invert">
+		<div id="btn-sidebar" onclick="openSidebar()">|||</div>
+		<p>Ethan Sawyer</p>
+	</div>
+
+	<main>
+		<div id="cover" onclick="closeSidebar()"></div>
+		<div id="sidebar">
+			<img src="/img/me.png" id="my-picture" class="border">
+			<h1 id="my-name">Ethan Sawyer</h1>
+
+			<div class="menu">
+				<a href="../../index.html"><div class="menu-item">Games</div></a>
+				<a href="../../prototypes.html"><div class="menu-item">Prototypes</div></a>
+				<a href="../../miscellaneous.html"><div class="menu-item invert">Miscellaneous</div></a>
+				<a href="../../about.html"><div class="menu-item">About Me</div></a>
+			</div>
+		</div>
+	
+		
+	<div class="game-content">
+
+		<iframe id="watchable" class="demo video-only" src="https://www.youtube.com/embed/_7NA4d-64XU?si=-ZKr4w_Dh0qTzy7S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		<div class="info border">
+			<h2>Projects</h2>
+			<p><strong>I-70 Rest Stop Adventure</strong>: Desperately search for a bathroom and discover a conspiracy along the way... <em>(Solo project)</em></p>
+			<p><a href="https://docs.google.com/presentation/d/12lYrPBTf8C1FQsmbAsYK1DlF6krQRHwJ-jrtsKh7BXI/edit?slide=id.p#slide=id.p">Design Materials</a></p>
+			<br>
+			<p><strong>Kid-Mappers</strong>: Clear loitering kids out of a theme park... with a tranquilizer gun. <em>(4 person team)</em></p>
+			<p><a href="https://docs.google.com/presentation/d/1qt_Q98WYd0laLcO7M-zyP1ZxN11S1yexjPthoLOXhDU/edit?slide=id.g33984abb78e_2_10#slide=id.g33984abb78e_2_10">Design Materials</a></p>
+			<br>
+			<p><strong>Trip to Target</strong>: Navigate the Minneapolis skyways to buy a toothbrush. <em>(Solo project)</em></p>
+			<p><a href="https://docs.google.com/presentation/d/1Sui8iT9WxKlTH6s8wvEU9Je4Fy6T9ClPmBtkm3Sv-C4/edit?slide=id.g331e9f0e395_0_0#slide=id.g331e9f0e395_0_0">Design Materials</a></p>
+		</div>
+
+
+		<article>
+			<h1 class="game-title">UE5 Level Design</h1>
+
+			<p>In my senior year at USC I had the opportunity to take a Level Design Workshop in Unreal Engine led by Richard Lemarchand, where I made 3 solo projec3s and one working in a team of 4. We focused on developing our skills creating written documentation and visual design materials for first person levels, making blockmesh in UE5, and iterating on them after playtesting them with our peers. I had a lot of fun inventing and building out these places, and I’m making this post to share my process.</p>
+
+			<h2>Design Materials</h2>
+			<p>For each level, I created a level flow diagram, multiple 2d layout drafts, and a collection of reference images emulating the feel I was going for. But the process always started by coming up with a place that resonated with me.</p>
+
+			<p>Mundanity is a huge source of inspiration for me. Not only does mundanity enhance my favorite narrative moods, like absurdity, liminality, melancholia, and surreality, but also every discovery is extra exciting when contrasted with mundane surroundings. So-called “boring” places are packed with surprise and intrigue when you really dig into them, and this is what I hoped to convey in the two solo projects I did for this workshop: One that takes place at a rest-stop off I-70 East, and the other taking place in an empty office complex in Minneapolis, MN. </p>
+
+			<p>For the I-70 Rest Stop level, I started by jotting down the narrative, and created this level flow diagram.</p>
+
+			<img src="img/level flow.png" alt="">
+			<p class="caption">In this level, your desperate search for a bathroom leads to the discovery of a massive cover-up...</p>
+
+			<p>Then, I sketched out a few drafts for the layout of the level.</p>
+
+			<img src="img/zeroth draft.png" alt="">
+			<p class="caption">Zeroth draft. Basic layout to match narrative beats.</p>
+			<img src="img/first draft.png" alt="">
+			<p class="caption">First draft. Layout basic structures.</p>
+			<img src="img/second draft.png" alt="">
+			<p class="caption">Second draft. Add details to create a blueprint for blockout.</p>
+
+			<p>The “zeroth” draft is just to get the basics down and make sure the narrative will flow through the space correctly. The first draft is useful for massing and actually creating the architecture of the space, and the second draft cleans everything up and adds all the details necessary to create a good blockout.</p>
+
+			<p>My goal with these layout sketches is to create a literal blueprint for my blockout. I want something that I can drop into a plane in Unreal and start placing objects on top of.</p>
+
+			<h2>Blockout</h2>
+			<p>With my layout sketches in hand, I jumped into UE5 and started building the level in 3D. To make things easier, I imported my layout sketches and put them on a giant plane so I could see where all the basic shapes would go in relation to each other.</p>
+
+			<p>With that, massing was easy, and using UE5’s modeling tools I quickly had a basic version of the level ready to play. At this stage, I was okay with abstract environments. I just wanted to get the scale, lines of sight, and basic wayfinding in place. All these things would be much harder to fix if I made a detailed environment from the start, because that would mean more things to move and re-make for each of these big, macro-level changes.</p>
+
+			<h2>Blockmesh</h2>
+			<p>For me, it’s useful to distinguish blockout from blockmesh: Blockout is an extremely simple first pass with basic shapes. It helps me do massing, set the general layout, and solve big usability problems early on. Blockmesh, on the other hand, is more representational, and solves some of the usability problems from the first round of playtests.</p>
+
+			<img src="img/minneapolis_out.png" alt="">
+			<p class="caption">BlockOUT of the starting area of my Minneapolis level.</p>
+			<img src="img/minneapolis_mesh.png" alt="">
+			<p class="caption">BlockMESH of the same area of the Minneapolis level.</p>
+
+			<p>I made my blockmesh using a combination of Blender and UE5’s modeling mode.</p>
+
+			<h2>Scripting</h2>
+			<p>I used UE5’s Blueprints to create basic mechanics for these levels.</p>
+
+			<h3>Level Bounds</h3>
+			<p>Since the I-70 Bathroom Adventure takes place outside, I needed to prevent the player from wondering off and getting lost, so I made invisible level bounds that put a timer on screen, warning the player to return to the path.</p>
+
+			<img src="img/level_bounds.png" alt="Screenshot of bounds BP">
+			<p class="caption">Blueprint for the Player's response to exiting and entering level bounds.</p>
+			<img src="img/bounds.png" alt="Screenshot of bounds in game">
+
+			<p>The bounds themselves have an inner and outer trigger volume that simply tells the player when it has left or re-entered the playable area. The player Blueprint pops some UI on screen and respawns you at your last inbounds location if you don’t run back in time.</p>
+
+			<h3>Object Examination</h3>
+			<p>To convey the narrative for I-70 Bathroom Adventure, I made an object inspection mechanic that allows the player to pick up pieces of paper on the ground containing narrative beats.</p>
+
+			<img src="img/inspect_objects.png" alt="">
+			<p class="caption">The Player's Blueprint for inspecting objects.</p>
+			
+			<p>It works by doing a Line Trace in the direction the player is facing, and if it finds an object implementing BPI_Interactable, it grabs its static mesh and swaps it into an invisible placeholder object right in front of the player camera.</p>
+			
+			<h3>Tranquilizer Darts</h3>
+			<p>For my team project, our level was about a security guard at an amusement park tasked with removing kids from the park if they lingered after closing time. Naturally, the mechanic we came up with for this was the give the player tranq darts to launch at these misbehaving kids.</p>
+			
+			<video preload="metadata" controls playsinline><source src="./video/Tranq Demo.mp4" type="video/mp4"></source></video>
+			
+			<p>I opted to make the player’s movement from scratch so I could learn more about movement and input in Unreal. This is the full player class.</p>
+			
+			<img src="img/tranq_player.png" alt="">
+			<p class="caption">The Player's Blueprint for firing tranq darts.</p>
+
+			<p>The dart is a Projectile that, on impact, checks if it hit a “Child” and dings to give the player some feedback that they got a hit.</p>
+
+		</article>
+	</div>
+
+	</main>
+
+	<script src="../../scripts/sidebar.js"></script>
+	<script src="../../scripts/demo.js"></script>
+</body>
+
+</html>

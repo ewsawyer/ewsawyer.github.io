@@ -1,6 +1,7 @@
 article img {
 	display: block;
 	width: 75%;
+	margin: 10px 0;
 }
 
 article h2, article h3, article p {
@@ -18,7 +19,7 @@ article video {
 	margin: 20px 0;
 }
 
-.info > p {
+.info > p, .info > h1, .info > h2, .info > h3 {
 	margin: 10px;
 }
 

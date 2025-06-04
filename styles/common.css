@@ -76,8 +76,8 @@ article {
 	flex: 0 0 0;
 	position: sticky;
 	top: 0px;
-	min-width: 300px;
-	max-width: 300px;
+	min-width: 350px;
+	max-width: 350px;
 	height: 100vh;
 	border-right: 5px solid var(--main-color);
 	padding-top: 50px;
@@ -177,11 +177,11 @@ a {
 		position: fixed;
 		top: 0px;
 		bottom: 0px;
-		min-width: 250px;
-		max-width: 250px;
+		min-width: 300px;
+		max-width: 300px;
 		margin-left: 0;
 		background-color: var(--main-bg-color);
-		transform: translate(-250px);
+		transform: translate(-300px);
 		transition: transform 0.15s;
 	}
 
