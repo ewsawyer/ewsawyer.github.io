@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width ,initial-scale=1.0, maximum-scale=1.0">
+	<title>Ethan Sawyer - Game Designer and Programmer</title>
+	<link rel="stylesheet" href="../../styles/common.css">
+	<link rel="stylesheet" href="../../styles/article.css">
+	<link rel="stylesheet" href="../../styles/game.css">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div id="topbar" class="mobile-only invert">
+		<div id="btn-sidebar" onclick="openSidebar()">|||</div>
+		<p>Ethan Sawyer</p>
+	</div>
+
+	<main>
+		<div id="examine-overlay">
+			<div id="examine-container"></div>
+		</div>
+		<div id="cover" onclick="closeSidebar()"></div>
+		<div id="sidebar">
+			<img src="/img/me.png" id="my-picture" class="border">
+			<h1 id="my-name">Ethan Sawyer</h1>
+
+			<div class="menu">
+				<a href="../../index.html"><div class="menu-item">Games</div></a>
+				<a href="../../prototypes.html"><div class="menu-item">Prototypes</div></a>
+				<a href="../../miscellaneous.html"><div class="menu-item invert">Miscellaneous</div></a>
+				<a href="../../about.html"><div class="menu-item">About Me</div></a>
+			</div>
+		</div>
+	
+		
+	<div class="game-content">
+
+		<iframe id="watchable" class="demo video-only" src="https://www.youtube.com/embed/4VW0OtgF8uU?si=7rVeGZ0XloFyt380" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		<div class="info border">
+			<p>Solo Project</p>
+			<p>Library for C# and Unity to make gamefeel fast & easy.</p>
+		</div>
+
+
+		<article>
+			<h1 class="game-title">Juice Box</h1>
+			
+			<p>I love juice/game feel/feedback/tactility or whatever your favorite word for it is. It’s so much fun to make that I can easily get carried away creating the perfect sensation for every action in my games. Game feel is not just bonus, it's <em>crucial</em> and working on it is never a waste of time. Juice Box is a C# library I wrote to do exactly that.</p>
+
+			<h2>What is Juice Box?</h2>
+
+			<p>This is a mini-library for adding juicy effects to 2D and 3D games that I wrote in September 2024, and have used in every single one of my projects since. I wrote it to be as flexible and customizable as possible without being needlessly complex or hard to learn. Some of my classmates have even used it in their own projects!</p>
+
+			[video insert showing the process for adding juice to the shoot action for DCB]
+
+			<h2>Why Bother?</h2>
+			<p>There are plenty of great pre-made assets that handle this for you (my favorite is <a href="https://assetstore.unity.com/packages/tools/particles-effects/feel-183370#reviews">Feel</a> and JuiceBox was heavily inspired by it), so why go to the trouble of making my own?</p>
+
+			<p><em><strong>I really really care about game feel</strong></em>, and I felt like I shouldn't be using someone else's code for something I love so much. Doing all of this work myself would also push me to develop my own style of gamefeel and force me to put extra thought into what makes good camera shake, hit stop, springiness, etc. so I could support it with my little library.</p>
+
+			<h2>Design Process</h2>
+			<p>I had in mind some priorities for my new game feel tool:</p>
+
+			<ol>
+				<li><strong>Extensible</strong>: creating new effects should be easy and fast, with minimal boilerplate.</li>
+				<li><strong>Portable</strong>: useful for any Unity project in any genre, 2D or 3D. I wanted to use this in all my games going forward.</li>
+				<li><strong>Uncomplicated</strong>: I was okay sacrificing some customizability if it meant less setup time for each effect and less confusion when using the system.</li>
+			</ol>
+
+			<p>To start, I imagined my ideal workflow for adding juice to an in-game action like a jump, collision, or item pickup, for example. The workflow goes like this:</p>
+			<ol>
+				<li><strong>Create</strong> a “container” that holds all the effects for a certain action</li>
+				<li><strong>Add</strong> a bunch of effects to the container, e.g. sound effects, particles, squash/stretch, etc.</li>
+				<li><strong>Reference</strong> the container in another script and call a Play() function that would trigger all of its effects.</li>
+			</ol>
+
+			<p>I figured the simplest, easiest-to-understand way of doing this was to build it right on top of Unity’s GameObject and Component structure. Each “container” would just be its own GameObject, and all the effects would be Components attached to it. To play the effects, you just needed a reference to the container GameObject. Here’s the workflow in action:</p>
+
+			<img src="img/structure.png" alt="">
+			<p class="caption">This game object contains a bunch of effects (Particles, Sound, Hitstop, etc) and a Juice Box, which finds and plays all these effects.</p>
+
+			<h2>What I Learned</h2>
+			<p>Writing Juice Box taught me the value of flexible, extensible, reusable code in a way I had never understood before. It’s been so easy to integrate into my projects and I thank my past self for writing it every time I use it.</p>
+
+			<p>It also made me think about my workflow in a new way. After writing Juice Box, I’ve started thinking about ways I can code up tools that lead to better workflows. Writing good tools has made me a faster, more flexible designer, and allows me to get experimental without investing a ton of additional time.</p>
+
+		</article>
+	</div>
+
+	</main>
+
+	<script src="../../scripts/sidebar.js"></script>
+	<script src="../../scripts/demo.js"></script>
+	<script src="../../scripts/examinables.js"></script>
+</body>
+
+</html>

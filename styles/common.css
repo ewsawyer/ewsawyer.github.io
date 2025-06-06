@@ -107,6 +107,16 @@ article {
 	transition: scale 0.2s ease-in-out;
 }
 
+ol {
+	list-style-position: outside;
+}
+
+li {
+	text-align: justify;
+	margin: 10px;
+	line-height: 1.75em;
+}
+
 #examine-container {
 	scale: 0.5;
 	height: 100%;
@@ -146,6 +156,10 @@ article {
 a {
 	color: unset;
 	text-decoration: unset;
+}
+
+p > a {
+	text-decoration: underline;
 }
 
 .border {

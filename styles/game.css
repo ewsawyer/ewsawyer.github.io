@@ -168,10 +168,6 @@ iframe > *:focus {
 	list-style: none inside;
 }
 
-ol {
-	list-style-position: inside;
-}
-
 .recognitions {
 	display: flex;
 	justify-content: space-around;
