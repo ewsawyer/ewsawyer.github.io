@@ -42,9 +42,16 @@
 		
 	<div class="game-content">
 
-		<iframe id="watchable" class="demo video-only" src="https://www.youtube.com/embed/VRszdcuxkrM?si=-xpigfpK8fjwJQZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		<div class="demo">
+			<div id="play-selector" class="active clickable">Trailer</div>
+			<div id="watch-selector" class="clickable">Gameplay</div>
+			<iframe id="playable" class="" src="https://www.youtube.com/embed/MpN3QMUOeb0?si=oCM9uPEt3xl7gzdV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			<iframe id="watchable" class="hidden" src="https://www.youtube.com/embed/VRszdcuxkrM?si=-xpigfpK8fjwJQZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		</div>
+
+
 		<div class="info border">
-			<iframe src="https://store.steampowered.com/widget/3506250/" frameborder="0" width="646" height="190"></iframe>
+			<iframe id="steam-embed" src="https://store.steampowered.com/widget/3506250/" frameborder="0" width="646" height="190"></iframe>
 			<p><strong>Role: </strong>Director</p>
 			<div class="link-bar">
 				<a href="https://store.steampowered.com/app/3506250/Scare_Crow/" target="_blank"><img src="../../img/steam.png"></a>

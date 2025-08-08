@@ -84,6 +84,10 @@ article > h2 {
 	animation: 3s infinite shine;
 }
 
+#steam-embed {
+	width: 100%;
+}
+
 .btn-load.fully-hidden {
 	display: none;
 }
